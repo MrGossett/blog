@@ -1,0 +1,21 @@
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+builddrafts = false
+baseurl = "http://mrgossett.github.io"
+canonifyurls = true
+languageCode = "en-us"
+title = "MrGossett"
+description = "code is poetry"
+author = "Tim Gossett"
+theme = "pixyll"
+pygmentsuseclasses = true
+paginate = 10
+
+[indexes]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  twitter_username = "MrGossett"
+  paginate = true
