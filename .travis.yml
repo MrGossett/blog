@@ -6,20 +6,26 @@ install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
   - go get -u github.com/spf13/hugo
 
-script: 
-  - hugo -b https://mrgossett.github.io/
-
-before_deploy:
+before_script:
+  - mkdir public
   - cd public
   - git init
   - git config user.email "tim@mrgossett.com"
   - git config user.name "Tim Gossett"
   - git remote add origin https://github.com/MrGossett/mrgossett.github.io.git
+  - git pull origin master
+  - cd ..
+
+script:
+  - hugo -b https://mrgossett.github.io/
+
+before_deploy:
+  - cd public
   - git add .
   - git commit -m "Publishing build $TRAVIS_BUILD_NUMBER"
 
 deploy:
   provider: script
-  script: git push --force origin master
+  script: git push origin master
   on:
     branch: master
