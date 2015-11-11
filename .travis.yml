@@ -4,7 +4,13 @@ branches:
 
 install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
-  - go get -u github.com/spf13/hugo
+  - mkdir -p "$HOME/gopath2"
+  - GOPATH="$HOME/gopath2" go get -u github.com/spf13/hugo
+  - export GOPATH="$HOME/gopath2:$GOPATH"
+
+cache:
+  directories:
+    - "$HOME/gopath2"
 
 before_script:
   - mkdir public
