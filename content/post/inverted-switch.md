@@ -30,7 +30,7 @@ type SomeRequest struct {
 }
 ```
 
-`package json` will do the heavy lifting to parse the date and convert the JSON numeric into a `uint64`. If the client had supplied something other than an ISO8601 date string for `some_date`, `package json` would squawk. The same goes for values in `thing_id` that cannot be converted to an `int64`.
+`package json` will do the heavy lifting to parse the date and convert the JSON numeric into an `int64`. If the client had supplied something other than an ISO8601 date string for `some_date`, `package json` would squawk. The same goes for values in `thing_id` that cannot be converted to an `int64`.
 
 ### validate me
 
