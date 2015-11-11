@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cat << EOF > issue_body
+$1
+
+\`\`\`yaml
+title: $1
+date: $(date +'%Y/%m/%d %H:%M:%S')
+\`\`\`
+EOF
+hub issue create -f issue_body
+rm issue_body
