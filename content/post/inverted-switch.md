@@ -1,7 +1,9 @@
-title: Inverted Switch
-date: 2015/08/09 14:15:53
-tags: ["go"]
----
++++
+date = "2015-08-09T14:15:53-05:00"
+title = "Inverted Switch"
+tags = ["go"]
+author = "Tim Gossett"
++++
 
 Go is great for building APIs. It's common for APIs to perform some validation on the data structures used in request bodies. 
 
