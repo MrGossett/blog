@@ -17,7 +17,7 @@ before_script:
   - cd ..
 
 script:
-  - hugo -b https://mrgossett.github.io/
+  - hugo -b https://mrgossett.com/
 
 before_deploy:
   - cd public
