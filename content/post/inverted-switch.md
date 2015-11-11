@@ -78,7 +78,7 @@ The second two conditionals are dealing with attributes of two different types: 
 ```go
 switch int64(0) {
 case req.ThingID, req.SomeDate.UnixNano():
-        // nope
+        return errInvalidRequest
 }
 ```
 
