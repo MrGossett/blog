@@ -2,13 +2,12 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 builddrafts = false
-baseurl = "http://mrgossett.github.io"
+baseurl = "http://mrgossett.com"
 canonifyurls = true
 languageCode = "en-us"
 title = "MrGossett"
 description = "code is poetry"
 author = "Tim Gossett"
-theme = "pixyll"
 pygmentsuseclasses = true
 paginate = 10
 

@@ -23,7 +23,7 @@ before_script:
   - cd ..
 
 script:
-  - hugo -b https://mrgossett.com
+  - hugo -b http://mrgossett.com
 
 before_deploy:
   - cd public
