@@ -6,7 +6,7 @@ install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
   - mkdir -p "$HOME/gopath2"
   - GOPATH="$HOME/gopath2" go get -u github.com/spf13/hugo
-  - export GOPATH="$HOME/gopath2:$GOPATH"
+  - export GOPATH="$HOME/gopath2:$GOPATH" PATH="$HOME/gopath2/bin:$PATH"
 
 cache:
   directories:
@@ -28,7 +28,7 @@ script:
 before_deploy:
   - cd public
   - git add .
-  - git commit -m "Publishing build $TRAVIS_BUILD_NUMBER"
+  - git commit -m "Publishing build $TRAVIS_BUILD_NUMBER" || true
 
 deploy:
   provider: script
