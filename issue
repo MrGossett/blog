@@ -3,9 +3,9 @@
 cat << EOF > issue_body
 $1
 
-\`\`\`yaml
-title: $1
-date: $(date +'%Y/%m/%d %H:%M:%S')
+\`\`\`toml
+title = "$1"
+date = "$(date +'%Y-%m-%dT%H:%M:%S%z')"
 \`\`\`
 EOF
 hub issue create -f issue_body
