@@ -8,8 +8,8 @@ install:
   - export PATH="$HOME/bin:$PATH"
   - |
     which hugo || \
-    curl -LO https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o "$HOME/hugo.tar.gz" && \
-    tar -vxf "$HOME/hugo.tar.gz" && cd "$HOME/hugo*" && cp hugo* "$HOME/bin/hugo"
+    curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o "$HOME/hugo.tar.gz" && \
+    tar -vxf "$HOME/hugo.tar.gz" && cd "$HOME/hugo_"* && cp hugo_* "$HOME/bin/hugo"
 
 cache:
   directories:
