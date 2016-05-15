@@ -7,7 +7,7 @@ author = "Tim Gossett"
 
 _This is part of a series explaining the SSH config I'm using on my machine (OS X 10.11). The config should be portable to most UNIX-based systems; Windows users are on their own._
 
-======
+---------------------------------------
 
 ## Quick Primer
 
@@ -83,7 +83,7 @@ Will remove an existing Unix domain socket file before attempting to create a ne
 
 Compresses data before putting it on the wire. Network communication is [faster when there are less bytes to send](http://chimera.labs.oreilly.com/books/1230000000545/ch02.html#_tuning_application_behavior). For latent or long-distance connections, the time spent compressing data will usually be less than the time it would take to transmit extra bytes; fast or local connections won't benefit from compression. Since I typically connect to remote machines, having compression on by default is helpful.
 
-===
+---------------------------------------
 
 This is part of a series explaining the SSH config I'm using on my machine. The full series will be:
 
