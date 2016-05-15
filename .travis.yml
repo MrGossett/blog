@@ -1,4 +1,4 @@
-language: go
+language: generic
 branches:
   only: master
 
@@ -7,9 +7,11 @@ install:
   - mkdir -p "$HOME/bin"
   - export PATH="$HOME/bin:$PATH"
   - |
-    which hugo || \
-    curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o $HOME/hugo.tar.gz && \
-    tar -vxf $HOME/hugo.tar.gz && find ./hugo_* -type f -name hugo_* -exec cp {} $HOME/bin/hugo \;
+    if [ ! `which hugo` ]; then
+      curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o $HOME/hugo.tar.gz
+      tar -vxf $HOME/hugo.tar.gz
+      find ./hugo_* -type f -name hugo_* -exec cp {} $HOME/bin/hugo \;
+    fi
 
 cache:
   directories:
