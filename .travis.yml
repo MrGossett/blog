@@ -4,13 +4,16 @@ branches:
 
 install:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
-  - mkdir -p "$HOME/gopath2"
-  - export GOPATH="$HOME/gopath2:$GOPATH" PATH="$HOME/gopath2/bin:$PATH"
-  - go get -u github.com/spf13/hugo
+  - mkdir -p "$HOME/bin"
+  - export PATH="$HOME/bin:$PATH"
+  - |
+    which hugo || \
+    curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o "$HOME/hugo.tar.gz" && \
+    tar -vxf hugo.tar.gz && cd hugo && ln -s hugo* hugo
 
 cache:
   directories:
-    - "$HOME/gopath2"
+    - "$HOME/bin"
 
 before_script:
   - mkdir public
