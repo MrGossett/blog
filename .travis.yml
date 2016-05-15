@@ -9,7 +9,7 @@ install:
   - |
     which hugo || \
     curl -L https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_386.tar.gz -o $HOME/hugo.tar.gz && \
-    tar -vxf $HOME/hugo.tar.gz && find ./hugo_* -type f -name hugo_* -exec echo {} $HOME/bin/hugo \;
+    tar -vxf $HOME/hugo.tar.gz && find ./hugo_* -type f -name hugo_* -exec cp {} $HOME/bin/hugo \;
 
 cache:
   directories:
