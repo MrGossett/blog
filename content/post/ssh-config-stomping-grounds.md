@@ -1,5 +1,5 @@
 +++
-date = "2016-06-011T18:04:08-05:00"
+date = "2016-06-11T18:04:08-05:00"
 title = "~/.ssh/config - Stomping Grounds"
 tags = ["sh","rc"]
 author = "Tim Gossett"
